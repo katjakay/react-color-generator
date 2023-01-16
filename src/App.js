@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+// import { Box } from '@mui/material';
 import randomColor from 'randomcolor';
 import { useState } from 'react';
 
@@ -6,27 +6,24 @@ export default function App() {
   const [color, setColor] = useState(randomColor());
   return (
     <div>
-      <h1> Random Color Generator</h1>
-      <button>
-        onClick=
-        {() => {
-          setColor(randomColor());
-        }}
-        > Generate
-      </button>
+      <h1>Random Color Generator</h1>
 
-      <div>
-        style=
-        {{
-          marginLeft: '40%',
-          marginTop: '60px',
-          width: '30%',
+      <div
+        style={{
+          width: '300px',
+          height: '300px',
           backgroundColor: color,
         }}
-        <Box color="white" bgcolor="red" p={10}>
-          {color}
-        </Box>
+      >
+        Generated Color: {color}
       </div>
+      <button
+        onClick={() => {
+          setColor(randomColor());
+        }}
+      >
+        Generate
+      </button>
     </div>
   );
 }

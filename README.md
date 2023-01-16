@@ -16,3 +16,16 @@ bgColor: color,
 }} >
 Generate
 </button>
+
+
+<div>
+        style=
+        {{
+          marginLeft: '40%',
+          marginTop: '60px',
+          width: '30%',
+          backgroundColor: color,
+        }}
+        <Box color="white" bgcolor="red" p={10}>
+          {color}
+        </Box>
