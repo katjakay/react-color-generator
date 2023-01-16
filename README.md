@@ -7,4 +7,12 @@ A random color generator which will show a random color when a button is clicked
 
 \*\* TODOs
 
--
+<button
+clickHandler={(event) => {
+let color = randomColor();
+this.setState({
+bgColor: color,
+});
+}} >
+Generate
+</button>

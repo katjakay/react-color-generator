@@ -1,25 +1,32 @@
-import './App.css';
-import logo from './logo.svg';
+import { Box } from '@mui/material';
+import randomColor from 'randomcolor';
+import { useState } from 'react';
 
-function App() {
+export default function App() {
+  const [color, setColor] = useState(randomColor());
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.......
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1> Random Color Generator</h1>
+      <button>
+        onClick=
+        {() => {
+          setColor(randomColor());
+        }}
+        > Generate
+      </button>
+
+      <div>
+        style=
+        {{
+          marginLeft: '40%',
+          marginTop: '60px',
+          width: '30%',
+          backgroundColor: color,
+        }}
+        <Box color="white" bgcolor="red" p={10}>
+          {color}
+        </Box>
+      </div>
     </div>
   );
 }
-
-export default App;
