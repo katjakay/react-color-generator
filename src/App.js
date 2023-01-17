@@ -1,6 +1,11 @@
+import { css } from '@emotion/react';
 import { Box } from '@mui/material';
 import randomColor from 'randomcolor';
 import { useState } from 'react';
+
+const buttonStyles = css`
+  background-color: '2d3142';
+`;
 
 export default function App() {
   const [color, setColor] = useState(randomColor());
@@ -15,7 +20,7 @@ export default function App() {
           alignItems: 'center',
           justifyContent: 'center',
           boxShadow: 2,
-          backgroundColor: color,
+          backgroundColor: color,yar
           borderRadius: 4,
         }}
       />
@@ -34,6 +39,7 @@ export default function App() {
       </div>
 
       <button
+        css={buttonStyles}
         onClick={() => {
           setColor(randomColor());
         }}
